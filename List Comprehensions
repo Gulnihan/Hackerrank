@@ -1,0 +1,10 @@
+from itertools import product
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+combinations = list(product(range(x+1), range(y+1), range(z+1)))
+
+filtered_combinations = [list(comb) for comb in combinations if sum(comb) != n]
+print(filtered_combinations)
